@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db_api
+    restart: always
+    environment:
+      POSTGRES_DB: missing_number_db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: django_app_api
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_NAME: missing_number_db
+      DB_USER: user
+      DB_PASSWORD: password
+      DB_HOST: db
+      DB_PORT: 5432
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+volumes:
+  postgres_data:
