@@ -65,3 +65,11 @@ Respuesta esperada:
   "missing_numbers": [42]
 }
 ```
+
+### Reiniciar el API
+Para volver a iniciar el proceso y reiniciar la lista de números, Ingresar los siguientes comandos:
+
+```sh
+docker-compose down -v
+docker-compose up --build
+```
