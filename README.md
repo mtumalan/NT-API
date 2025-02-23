@@ -49,7 +49,7 @@ curl -X POST http://localhost:8000/api/extract/ -H "Content-Type: application/js
 Respuesta esperada:
 ```json
 {
-  "message": "Número 42 extraído"
+  "message": "Number 42 extracted successfully."
 }
 ```
 
