@@ -62,6 +62,6 @@ curl -X GET http://localhost:8000/api/missing_number/
 Respuesta esperada:
 ```json
 {
-  "missing_number": 42
+  "missing_numbers": [42]
 }
 ```

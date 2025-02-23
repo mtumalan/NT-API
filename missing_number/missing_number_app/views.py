@@ -7,7 +7,7 @@ class NaturalNumbersSet:
     """Clase que maneja el conjunto de números naturales y su extracción"""
 
     def extract(self, number):
-        """Extract a number and mark it as missing."""
+        """Extrae un número del conjunto de números naturales"""
         if not (1 <= number <= 100):
             raise ValueError("Number must be between 1 and 100.")
         
@@ -18,7 +18,7 @@ class NaturalNumbersSet:
 
     @staticmethod
     def get_missing_numbers():
-        """Returns a list of missing numbers (i.e., missing numbers)."""
+        """Obtiene todos los números extraídos (faltantes)"""
         missing_numbers = list(ExtractedNumber.objects.values_list('number', flat=True))
         return sorted(missing_numbers)  # Sort for better readability
 
