@@ -16,8 +16,8 @@ Sigue estos pasos para ejecutar la aplicación dentro de un contenedor Docker.
 ### 1. Clonar el Repositorio
 
 ```sh
-git clone https://github.com/tu_usuario/tu_repositorio.git
-cd tu_repositorio
+git clone https://github.com/mtumalan/NT-API.git
+cd NT-API
 ```
 
 ### 2. Construir y Ejecutar el Contenedor
